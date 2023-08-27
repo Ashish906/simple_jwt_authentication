@@ -1,0 +1,37 @@
+{
+  "name": "simple_jwt_authentication",
+  "version": "1.0.0",
+  "description": "This is a demo simple jwt authentication app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js",
+    "start-dev": "nodemon server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashish906/simple_jwt_authentication.git"
+  },
+  "keywords": [],
+  "author": "Ashish Sarker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ashish906/simple_jwt_authentication/issues"
+  },
+  "homepage": "https://github.com/Ashish906/simple_jwt_authentication#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "geoip-lite": "^1.4.7",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,1 @@
+exports.UserCollection = require('./user/user.model')

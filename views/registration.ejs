@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Login</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form class="form-horizontal" action="/registration" method="post">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Name<span style="color: red;">*</span>:</label>
+                <div class="col-sm-10">
+                    <input name="name" type="text" maxlength="50" class="form-control" id="name" placeholder="Enter name">
+                    <p style="color: brown;"><%=errors?.name%></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email<span style="color: red;">*</span>:</label>
+                <div class="col-sm-10">
+                    <input name="email" type="email" maxlength="50" class="form-control" id="email" placeholder="Enter email">
+                    <p style="color: brown;"><%=errors?.email%></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="phoneNumber">Phone<span style="color: red;">*</span>:</label>
+                <div class="col-sm-10">
+                    <input name="phoneNumber" type="text" maxlength="11" class="form-control" id="email" placeholder="Enter phone number">
+                    <p style="color: brown;"><%=errors?.phoneNumber%></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="password">Password<span style="color: red;">*</span>:</label>
+                <div class="col-sm-10">
+                    <input name="password" type="password" maxlength="10" class="form-control" id="password" placeholder="Enter password">
+                    <p style="color: brown;"><%=errors?.password%></p>
+                </div>
+                <div class="col-sm-10" style="text-align: right;">
+                    <span><a href="/login">Login here</a></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

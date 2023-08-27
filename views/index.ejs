@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Simple jwt authentication</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Sample jwt authentication</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>
+                        <%=data.user.name%>
+                    </a></li>
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Users</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone number</th>
+                    <th>Browser</th>
+                    <th>Language</th>
+                    <th>Country</th>
+                    <th>Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(const userInfo of data.users) { %>
+                    <tr>
+                        <td><%=userInfo.name%></td>
+                        <td><%=userInfo.email%></td>
+                        <td><%=userInfo.phoneNumber%></td>
+                        <td><%=userInfo.browser%></td>
+                        <td><%=userInfo.language%></td>
+                        <td><%=userInfo.country%></td>
+                        <td><%=userInfo.region%></td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
